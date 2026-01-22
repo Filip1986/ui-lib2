@@ -9,7 +9,7 @@ export type ButtonColor = 'primary' | 'secondary' | 'success' | 'danger' | 'warn
   selector: 'uilib-button',
   imports: [CommonModule],
   templateUrl: './button.html',
-  styleUrl: './button.css',
+  styleUrl: './button.scss',
 })
 export class Button {
   @Input() variant: ButtonVariant = 'material';

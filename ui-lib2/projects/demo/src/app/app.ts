@@ -6,7 +6,7 @@ import { Card } from 'ui-components';
   selector: 'app-root',
   imports: [Button, Card],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('UI Components Library Demo');

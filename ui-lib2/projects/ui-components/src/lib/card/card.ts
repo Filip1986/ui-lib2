@@ -8,7 +8,7 @@ export type CardElevation = 'none' | 'low' | 'medium' | 'high';
   selector: 'uilib-card',
   imports: [CommonModule],
   templateUrl: './card.html',
-  styleUrl: './card.css',
+  styleUrl: './card.scss',
 })
 export class Card {
   @Input() variant: CardVariant = 'material';

@@ -48,7 +48,7 @@
               }
             ],
             "styles": [
-              "projects/demo/src/styles.css"
+              "projects/demo/src/styles.scss"
             ]
           },
           "configurations": {
@@ -101,7 +101,7 @@
               }
             ],
             "styles": [
-              "projects/demo/src/styles.css"
+              "projects/demo/src/styles.scss"
             ]
           }
         }
