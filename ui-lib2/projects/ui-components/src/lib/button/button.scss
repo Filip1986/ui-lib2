@@ -66,7 +66,11 @@ $bootstrap-warning: #ffc107;
 @mixin bootstrap-button($bg-color) {
   background-color: $bg-color;
   border-color: $bg-color;
-  color: if($bg-color == $bootstrap-warning, #000, white);
+  @if $bg-color == $bootstrap-warning {
+    color: #000;
+  } @else {
+    color: #fff;
+  }
 }
 
 @mixin minimal-button($color) {

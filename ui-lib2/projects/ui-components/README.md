@@ -1,6 +1,78 @@
 # UiComponents
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+
+## Installation
+
+To use this library in your Angular application, install it along with its peer dependencies:
+
+```bash
+npm install @filip86/ui-components primeng primeicons
+```
+
+### Requirements
+
+- **Angular**: 21.x or 22.x
+- **PrimeNG**: 21.x
+- **PrimeIcons**: 7.x
+- **TypeScript**: 5.9+
+
+### PrimeNG Setup
+
+This library uses PrimeNG components internally. You need to include PrimeNG styles in your application.
+
+**Add to your `styles.scss` or `angular.json`:**
+
+```scss
+// PrimeNG Theme and Icons
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+```
+
+**Or in `angular.json`:**
+
+```json
+"styles": [
+  "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+  "node_modules/primeng/resources/primeng.css",
+  "node_modules/primeicons/primeicons.css",
+  "src/styles.scss"
+]
+```
+
+You can choose any PrimeNG theme that suits your application. Available themes can be found in `node_modules/primeng/resources/themes/`.
+
+## Usage
+
+Import the components you need in your Angular application:
+
+```typescript
+import { LoginComponent } from '@filip86/ui-components';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [LoginComponent],
+  template: `
+    <lib-login 
+      [variant]="'1'"
+      [features]="{
+        showSocialLogin: true,
+        showRememberMe: true,
+        showForgotPassword: true,
+        showRegisterLink: true
+      }"
+      (submitLogin)="onLogin($event)"
+    />
+  `
+})
+export class AppComponent {
+  onLogin(data: any) {
+    console.log('Login data:', data);
+  }
+}
+```
 
 ## Code scaffolding
 
