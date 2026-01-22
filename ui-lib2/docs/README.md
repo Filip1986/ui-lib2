@@ -48,6 +48,15 @@ docs/
 
 - **[Publishing Guide](guides/PUBLISHING_GUIDE.md)** - Distribution and publishing
   - Publish to npm
+  - Authentication setup (2FA/tokens)
+  - Troubleshooting common errors
+
+- **[Version Management](guides/VERSION_MANAGEMENT.md)** - Versioning and releases
+  - Semantic versioning guide
+  - Where to update version numbers
+  - Publishing new versions
+  - Pre-release versions
+  - Version rollback strategies
   - Local development with npm link
   - Git-based distribution
   - Continuous development workflow

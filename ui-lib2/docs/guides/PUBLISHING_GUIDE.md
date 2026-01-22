@@ -42,21 +42,43 @@ npm requires two-factor authentication (2FA) for publishing packages. You have t
 
 #### Publishing Steps
 
-1. **Build the library:**
+1. **Update package.json with your publishing details:**
+   
+   > **IMPORTANT:** Edit the source package.json at `projects/ui-components/package.json`, NOT the dist version!
+   > The dist version is regenerated on every build and any changes there will be lost.
+
+   Update `projects/ui-components/package.json`:
+   ```json
+   {
+     "name": "@yourusername/ui-components",
+     "version": "1.0.0",
+     "description": "Your library description",
+     "author": "Your Name <your.email@example.com>",
+     "license": "MIT",
+     "keywords": ["angular", "components", "ui"],
+     "repository": {
+       "type": "git",
+       "url": "https://github.com/yourusername/your-repo.git"
+     },
+     "bugs": {
+       "url": "https://github.com/yourusername/your-repo/issues"
+     },
+     "homepage": "https://github.com/yourusername/your-repo#readme"
+   }
+   ```
+
+2. **Build the library:**
    ```bash
    cd ui-lib2
    ng build ui-components
    ```
+   This will generate the dist folder with your updated package.json metadata.
 
-2. **Navigate to the dist folder:**
+3. **Navigate to the dist folder:**
    ```bash
    cd dist/ui-components
    ```
 
-3. **Update package.json with your details:**
-   - Update the `name` field to a unique package name (e.g., `@yourusername/ui-components`)
-   - Update `version` field
-   - Add `author`, `description`, `keywords`, `repository`, etc.
 
 4. **Verify you're logged in:**
    ```bash
