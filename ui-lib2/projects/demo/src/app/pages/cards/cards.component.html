@@ -1,0 +1,210 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Card Components</h1>
+    <p class="page-description">
+      Versatile card components with customizable headers, footers, and elevation levels.
+      Available in Material Design, Bootstrap, and Minimal styles.
+    </p>
+  </div>
+
+  <section class="component-section">
+    <h2>Material Design Variant</h2>
+    <p class="variant-description">
+      Material Design cards with elevation shadows and rounded corners.
+    </p>
+
+    <div class="card-grid">
+      <uilib-card variant="material" elevation="low">
+        <div card-header>Low Elevation</div>
+        <p>This card has low elevation with subtle shadows.</p>
+        <p>Great for content that doesn't need much emphasis.</p>
+        <div card-footer>
+          <uilib-button variant="material" color="primary" size="small">Action</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="material" elevation="medium">
+        <div card-header>Medium Elevation</div>
+        <p>This card has medium elevation, providing balanced visual hierarchy.</p>
+        <p>Perfect for most use cases.</p>
+        <div card-footer>
+          <uilib-button variant="material" color="success" size="small">Confirm</uilib-button>
+          <uilib-button variant="minimal" color="secondary" size="small">Cancel</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="material" elevation="high">
+        <div card-header>High Elevation</div>
+        <p>This card has high elevation with prominent shadows.</p>
+        <p>Use for important content or modal-like components.</p>
+        <div card-footer>
+          <uilib-button variant="material" color="danger" size="small">Delete</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="material" elevation="medium" [hoverable]="true">
+        <div card-header>Hoverable Card</div>
+        <p>This card has hover effects enabled.</p>
+        <p>Try hovering over it to see the elevation change!</p>
+      </uilib-card>
+
+      <uilib-card variant="material" elevation="low">
+        <p><strong>Simple Card</strong></p>
+        <p>Cards don't require headers or footers. This is a simple card with just content.</p>
+      </uilib-card>
+
+      <uilib-card variant="material" elevation="medium">
+        <div card-header>User Profile</div>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <p><strong>Role:</strong> Developer</p>
+        <div card-footer>
+          <uilib-button variant="material" color="primary" size="small">Edit</uilib-button>
+          <uilib-button variant="material" color="secondary" size="small">View</uilib-button>
+        </div>
+      </uilib-card>
+    </div>
+  </section>
+
+  <section class="component-section">
+    <h2>Bootstrap Variant</h2>
+    <p class="variant-description">
+      Classic Bootstrap-styled cards with borders and subtle shadows.
+    </p>
+
+    <div class="card-grid">
+      <uilib-card variant="bootstrap" elevation="low">
+        <div card-header>Default Card</div>
+        <p>Bootstrap-styled card with low elevation.</p>
+        <p>Familiar design pattern from Bootstrap framework.</p>
+        <div card-footer>
+          <uilib-button variant="bootstrap" color="primary" size="small">Action</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="bootstrap" elevation="medium" [bordered]="true">
+        <div card-header>Bordered Card</div>
+        <p>This card has explicit borders for better definition.</p>
+        <p>Great for layouts with similar background colors.</p>
+        <div card-footer>
+          <uilib-button variant="bootstrap" color="success" size="small">Submit</uilib-button>
+          <uilib-button variant="bootstrap" color="secondary" size="small">Cancel</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="bootstrap" elevation="high">
+        <div card-header>High Elevation</div>
+        <p>Bootstrap card with increased shadow depth.</p>
+        <p>Suitable for important notifications or alerts.</p>
+      </uilib-card>
+
+      <uilib-card variant="bootstrap" elevation="low" [hoverable]="true">
+        <div card-header>Hoverable</div>
+        <p>Hover over this card to see the effect!</p>
+      </uilib-card>
+
+      <uilib-card variant="bootstrap" elevation="medium">
+        <p><strong>Product Card</strong></p>
+        <p>Price: $29.99</p>
+        <p>Stock: Available</p>
+        <div card-footer>
+          <uilib-button variant="bootstrap" color="success" size="small">Add to Cart</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="bootstrap" elevation="low" [bordered]="true">
+        <div card-header>Statistics</div>
+        <p><strong>Views:</strong> 1,234</p>
+        <p><strong>Clicks:</strong> 567</p>
+        <p><strong>Conversions:</strong> 89</p>
+      </uilib-card>
+    </div>
+  </section>
+
+  <section class="component-section">
+    <h2>Minimal Variant</h2>
+    <p class="variant-description">
+      Clean, minimalist cards with optional borders and no shadows.
+    </p>
+
+    <div class="card-grid">
+      <uilib-card variant="minimal" elevation="none" [bordered]="true">
+        <div card-header>Bordered Minimal</div>
+        <p>Minimal card with clean borders.</p>
+        <p>Perfect for content-focused layouts.</p>
+        <div card-footer>
+          <uilib-button variant="minimal" color="primary" size="small">Learn More</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="minimal" elevation="none" [bordered]="false">
+        <div card-header>No Border</div>
+        <p>Minimal card without borders.</p>
+        <p>Ultra-clean appearance for modern designs.</p>
+      </uilib-card>
+
+      <uilib-card variant="minimal" elevation="none" [bordered]="true" [hoverable]="true">
+        <div card-header>Interactive</div>
+        <p>Hover to see the subtle effect!</p>
+        <p>Great for clickable cards.</p>
+      </uilib-card>
+
+      <uilib-card variant="minimal" elevation="none" [bordered]="true">
+        <p><strong>Article Preview</strong></p>
+        <p>Published: Jan 20, 2026</p>
+        <p>Author: Jane Smith</p>
+        <div card-footer>
+          <uilib-button variant="minimal" color="primary" size="small">Read More</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="minimal" elevation="none" [bordered]="true">
+        <div card-header>Contact Info</div>
+        <p><strong>Phone:</strong> (555) 123-4567</p>
+        <p><strong>Email:</strong> info@example.com</p>
+        <p><strong>Address:</strong> 123 Main St</p>
+      </uilib-card>
+
+      <uilib-card variant="minimal" elevation="none" [bordered]="false">
+        <p>Simple card with no borders or shadows.</p>
+        <p>Maximum minimalism achieved.</p>
+      </uilib-card>
+    </div>
+  </section>
+
+  <section class="component-section">
+    <h2>Mixed Examples</h2>
+    <p class="variant-description">
+      Real-world usage examples combining different variants
+    </p>
+
+    <div class="card-grid">
+      <uilib-card variant="material" elevation="medium">
+        <div card-header>Dashboard Widget</div>
+        <p><strong>Revenue:</strong> $45,678</p>
+        <p><strong>Growth:</strong> +12.5%</p>
+        <p><strong>Status:</strong> <span style="color: green;">Healthy</span></p>
+        <div card-footer>
+          <uilib-button variant="material" color="primary" size="small">View Report</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="bootstrap" elevation="low" [bordered]="true">
+        <div card-header>Recent Activity</div>
+        <p>• User logged in</p>
+        <p>• Profile updated</p>
+        <p>• Settings changed</p>
+        <div card-footer>
+          <uilib-button variant="bootstrap" color="secondary" size="small">View All</uilib-button>
+        </div>
+      </uilib-card>
+
+      <uilib-card variant="minimal" elevation="none" [bordered]="true">
+        <div card-header>Quick Links</div>
+        <p><a href="#" style="color: #667eea;">Documentation</a></p>
+        <p><a href="#" style="color: #667eea;">API Reference</a></p>
+        <p><a href="#" style="color: #667eea;">Support</a></p>
+      </uilib-card>
+    </div>
+  </section>
+</div>

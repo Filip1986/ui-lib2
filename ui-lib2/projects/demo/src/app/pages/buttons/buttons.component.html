@@ -1,0 +1,150 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Button Components</h1>
+    <p class="page-description">
+      Flexible button components with multiple design variants, colors, and sizes.
+      Choose from Material Design, Bootstrap, or Minimal styles.
+    </p>
+  </div>
+
+  <section class="component-section">
+    <h2>Material Design Variant</h2>
+    <p class="variant-description">
+      Material Design buttons with elevation and ripple effects. Perfect for modern, clean interfaces.
+    </p>
+
+    <div class="demo-group">
+      <h3>Colors</h3>
+      <div class="button-group">
+        <uilib-button variant="material" color="primary">Primary</uilib-button>
+        <uilib-button variant="material" color="secondary">Secondary</uilib-button>
+        <uilib-button variant="material" color="success">Success</uilib-button>
+        <uilib-button variant="material" color="danger">Danger</uilib-button>
+        <uilib-button variant="material" color="warning">Warning</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Sizes</h3>
+      <div class="button-group">
+        <uilib-button variant="material" size="small" color="primary">Small</uilib-button>
+        <uilib-button variant="material" size="medium" color="primary">Medium</uilib-button>
+        <uilib-button variant="material" size="large" color="primary">Large</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Disabled State</h3>
+      <div class="button-group">
+        <uilib-button variant="material" color="primary" [disabled]="true">Disabled Primary</uilib-button>
+        <uilib-button variant="material" color="success" [disabled]="true">Disabled Success</uilib-button>
+        <uilib-button variant="material" color="danger" [disabled]="true">Disabled Danger</uilib-button>
+      </div>
+    </div>
+  </section>
+
+  <section class="component-section">
+    <h2>Bootstrap Variant</h2>
+    <p class="variant-description">
+      Classic Bootstrap-styled buttons with solid colors and subtle shadows.
+    </p>
+
+    <div class="demo-group">
+      <h3>Colors</h3>
+      <div class="button-group">
+        <uilib-button variant="bootstrap" color="primary">Primary</uilib-button>
+        <uilib-button variant="bootstrap" color="secondary">Secondary</uilib-button>
+        <uilib-button variant="bootstrap" color="success">Success</uilib-button>
+        <uilib-button variant="bootstrap" color="danger">Danger</uilib-button>
+        <uilib-button variant="bootstrap" color="warning">Warning</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Sizes</h3>
+      <div class="button-group">
+        <uilib-button variant="bootstrap" size="small" color="primary">Small</uilib-button>
+        <uilib-button variant="bootstrap" size="medium" color="primary">Medium</uilib-button>
+        <uilib-button variant="bootstrap" size="large" color="primary">Large</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Disabled State</h3>
+      <div class="button-group">
+        <uilib-button variant="bootstrap" color="primary" [disabled]="true">Disabled Primary</uilib-button>
+        <uilib-button variant="bootstrap" color="success" [disabled]="true">Disabled Success</uilib-button>
+        <uilib-button variant="bootstrap" color="danger" [disabled]="true">Disabled Danger</uilib-button>
+      </div>
+    </div>
+  </section>
+
+  <section class="component-section">
+    <h2>Minimal Variant</h2>
+    <p class="variant-description">
+      Minimalist buttons with clean lines and subtle hover effects. Ideal for modern, uncluttered UIs.
+    </p>
+
+    <div class="demo-group">
+      <h3>Colors</h3>
+      <div class="button-group">
+        <uilib-button variant="minimal" color="primary">Primary</uilib-button>
+        <uilib-button variant="minimal" color="secondary">Secondary</uilib-button>
+        <uilib-button variant="minimal" color="success">Success</uilib-button>
+        <uilib-button variant="minimal" color="danger">Danger</uilib-button>
+        <uilib-button variant="minimal" color="warning">Warning</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Sizes</h3>
+      <div class="button-group">
+        <uilib-button variant="minimal" size="small" color="primary">Small</uilib-button>
+        <uilib-button variant="minimal" size="medium" color="primary">Medium</uilib-button>
+        <uilib-button variant="minimal" size="large" color="primary">Large</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Disabled State</h3>
+      <div class="button-group">
+        <uilib-button variant="minimal" color="primary" [disabled]="true">Disabled Primary</uilib-button>
+        <uilib-button variant="minimal" color="success" [disabled]="true">Disabled Success</uilib-button>
+        <uilib-button variant="minimal" color="danger" [disabled]="true">Disabled Danger</uilib-button>
+      </div>
+    </div>
+  </section>
+
+  <section class="component-section">
+    <h2>Usage Examples</h2>
+    <p class="variant-description">
+      Common button combinations and use cases
+    </p>
+
+    <div class="demo-group">
+      <h3>Form Actions</h3>
+      <div class="button-group">
+        <uilib-button variant="material" color="primary">Save</uilib-button>
+        <uilib-button variant="material" color="secondary">Cancel</uilib-button>
+        <uilib-button variant="minimal" color="danger">Delete</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Dialog Actions</h3>
+      <div class="button-group">
+        <uilib-button variant="bootstrap" color="success">Confirm</uilib-button>
+        <uilib-button variant="bootstrap" color="secondary">Dismiss</uilib-button>
+      </div>
+    </div>
+
+    <div class="demo-group">
+      <h3>Navigation</h3>
+      <div class="button-group">
+        <uilib-button variant="minimal" color="primary">Previous</uilib-button>
+        <uilib-button variant="minimal" color="primary">Next</uilib-button>
+        <uilib-button variant="minimal" color="success">Finish</uilib-button>
+      </div>
+    </div>
+  </section>
+</div>

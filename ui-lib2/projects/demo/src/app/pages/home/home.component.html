@@ -1,0 +1,109 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Welcome to UI Components Library</h1>
+    <p class="page-description">
+      Explore our collection of beautifully designed, reusable UI components.
+      Click on a component section to view it in detail or browse all components below.
+    </p>
+  </div>
+  <div class="quick-links">
+    <a routerLink="/buttons" class="quick-link-card">
+      <i class="pi pi-circle"></i>
+      <h3>Buttons</h3>
+      <p>Material, Bootstrap & Minimal variants</p>
+    </a>
+    <a routerLink="/cards" class="quick-link-card">
+      <i class="pi pi-id-card"></i>
+      <h3>Cards</h3>
+      <p>Flexible card components with headers & footers</p>
+    </a>
+    <a routerLink="/login" class="quick-link-card">
+      <i class="pi pi-sign-in"></i>
+      <h3>Login Forms</h3>
+      <p>Three beautiful login form variants</p>
+    </a>
+  </div>
+  <section class="component-section" id="buttons">
+    <div class="section-header">
+      <h2>Button Components</h2>
+      <a routerLink="/buttons" class="view-more">View Details →</a>
+    </div>
+    <div class="variant-group">
+      <h3>Material Design Variant</h3>
+      <div class="button-group">
+        <uilib-button variant="material" color="primary">Primary</uilib-button>
+        <uilib-button variant="material" color="secondary">Secondary</uilib-button>
+        <uilib-button variant="material" color="success">Success</uilib-button>
+        <uilib-button variant="material" color="danger">Danger</uilib-button>
+        <uilib-button variant="material" color="warning">Warning</uilib-button>
+      </div>
+    </div>
+    <div class="variant-group">
+      <h3>Bootstrap Variant</h3>
+      <div class="button-group">
+        <uilib-button variant="bootstrap" color="primary">Primary</uilib-button>
+        <uilib-button variant="bootstrap" color="secondary">Secondary</uilib-button>
+        <uilib-button variant="bootstrap" color="success">Success</uilib-button>
+      </div>
+    </div>
+    <div class="variant-group">
+      <h3>Minimal Variant</h3>
+      <div class="button-group">
+        <uilib-button variant="minimal" color="primary">Primary</uilib-button>
+        <uilib-button variant="minimal" color="secondary">Secondary</uilib-button>
+        <uilib-button variant="minimal" color="success">Success</uilib-button>
+      </div>
+    </div>
+  </section>
+  <section class="component-section" id="cards">
+    <div class="section-header">
+      <h2>Card Components</h2>
+      <a routerLink="/cards" class="view-more">View Details →</a>
+    </div>
+    <div class="card-grid">
+      <uilib-card variant="material" elevation="medium">
+        <div card-header>Material Design</div>
+        <p>Clean shadows and rounded corners.</p>
+        <div card-footer>
+          <uilib-button variant="material" color="primary" size="small">Action</uilib-button>
+        </div>
+      </uilib-card>
+      <uilib-card variant="bootstrap" elevation="low">
+        <div card-header>Bootstrap Style</div>
+        <p>Subtle borders and shadows.</p>
+        <div card-footer>
+          <uilib-button variant="bootstrap" color="success" size="small">Submit</uilib-button>
+        </div>
+      </uilib-card>
+      <uilib-card variant="minimal" elevation="none" [bordered]="true">
+        <div card-header>Minimal Design</div>
+        <p>Clean lines and no shadows.</p>
+        <div card-footer>
+          <uilib-button variant="minimal" color="primary" size="small">Learn More</uilib-button>
+        </div>
+      </uilib-card>
+    </div>
+  </section>
+  <section class="component-section" id="login">
+    <div class="section-header">
+      <h2>Login Components</h2>
+      <a routerLink="/login" class="view-more">View Details →</a>
+    </div>
+    <p class="section-description">Three different login component variants with full functionality</p>
+    <div class="login-preview-grid">
+      <div class="login-preview-item">
+        <h3>Variant 1 - Card Style</h3>
+        <div class="login-preview-container">
+          <lib-login-1
+            [loading]="loginLoading"
+            (submitLogin)="onLogin($event)"
+            (registerClick)="onRegister()"
+            (forgotPasswordClick)="onForgotPassword($event)"
+            (socialLoginClick)="onSocialLogin($event)"
+            (rememberMeChange)="onRememberMeChange($event)"
+          ></lib-login-1>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

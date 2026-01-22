@@ -1,0 +1,128 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Login Components</h1>
+    <p class="page-description">
+      Three beautiful login form variants with full functionality including social login, remember me, and forgot password features.
+    </p>
+  </div>
+  <section class="component-section">
+    <h2>Login Variant 1 - Card Style</h2>
+    <p class="variant-description">
+      Elegant card-based login with gradient header and clean Material Design elements.
+      Features social login buttons and a modern, professional appearance.
+    </p>
+    <div class="login-demo-container card-style-bg">
+      <lib-login-1
+        [loading]="loginLoading"
+        (submitLogin)="onLogin($event)"
+        (registerClick)="onRegister()"
+        (forgotPasswordClick)="onForgotPassword($event)"
+        (socialLoginClick)="onSocialLogin($event)"
+        (rememberMeChange)="onRememberMeChange($event)"
+      ></lib-login-1>
+    </div>
+    <div class="features-list">
+      <h3>Features:</h3>
+      <ul>
+        <li>Gradient header with icon</li>
+        <li>Social login buttons (Google, Facebook, GitHub)</li>
+        <li>Remember me checkbox</li>
+        <li>Forgot password link</li>
+        <li>Registration link</li>
+        <li>Loading state with spinner</li>
+        <li>Form validation</li>
+      </ul>
+    </div>
+  </section>
+  <section class="component-section">
+    <h2>Login Variant 2 - Minimal Style</h2>
+    <p class="variant-description">
+      Clean, minimalist login design with focus on simplicity and usability.
+      Perfect for modern applications that prioritize content over decoration.
+    </p>
+    <div class="login-demo-container minimal-style-bg">
+      <lib-login-2
+        [loading]="loginLoading"
+        (submitLogin)="onLogin($event)"
+        (registerClick)="onRegister()"
+        (forgotPasswordClick)="onForgotPassword($event)"
+        (socialLoginClick)="onSocialLogin($event)"
+        (rememberMeChange)="onRememberMeChange($event)"
+      ></lib-login-2>
+    </div>
+    <div class="features-list">
+      <h3>Features:</h3>
+      <ul>
+        <li>Minimalist design approach</li>
+        <li>Clean input fields with subtle borders</li>
+        <li>Social login options</li>
+        <li>Remember me functionality</li>
+        <li>Forgot password support</li>
+        <li>Simple registration flow</li>
+        <li>Responsive layout</li>
+      </ul>
+    </div>
+  </section>
+  <section class="component-section">
+    <h2>Login Variant 3 - Split Panel Style</h2>
+    <p class="variant-description">
+      Modern split-panel design with floating labels and a visually striking layout.
+      Ideal for applications that want to make a strong visual impression.
+    </p>
+    <div class="login-demo-container split-style-bg">
+      <lib-login-3
+        [loading]="loginLoading"
+        (submitLogin)="onLogin($event)"
+        (registerClick)="onRegister()"
+        (forgotPasswordClick)="onForgotPassword($event)"
+        (socialLoginClick)="onSocialLogin($event)"
+        (rememberMeChange)="onRememberMeChange($event)"
+      ></lib-login-3>
+    </div>
+    <div class="features-list">
+      <h3>Features:</h3>
+      <ul>
+        <li>Split-panel layout design</li>
+        <li>Floating label inputs</li>
+        <li>Prominent branding area</li>
+        <li>Social authentication options</li>
+        <li>Remember me checkbox</li>
+        <li>Password recovery</li>
+        <li>Sign-up navigation</li>
+        <li>Modern animations</li>
+      </ul>
+    </div>
+  </section>
+  <section class="component-section">
+    <h2>Implementation Guide</h2>
+    <p class="variant-description">
+      All login components share the same API and emit consistent events for easy integration.
+    </p>
+    <div class="implementation-guide">
+      <div class="guide-section">
+        <h3>Events</h3>
+        <ul>
+          <li><code>submitLogin</code> - Emits LoginFormData when form is submitted</li>
+          <li><code>registerClick</code> - Emits when register link is clicked</li>
+          <li><code>forgotPasswordClick</code> - Emits username when forgot password is clicked</li>
+          <li><code>socialLoginClick</code> - Emits provider name (google, facebook, github)</li>
+          <li><code>rememberMeChange</code> - Emits boolean when remember me is toggled</li>
+        </ul>
+      </div>
+      <div class="guide-section">
+        <h3>Inputs</h3>
+        <ul>
+          <li><code>loading</code> - Boolean to show loading state</li>
+        </ul>
+      </div>
+      <div class="guide-section">
+        <h3>LoginFormData Interface</h3>
+        <ul>
+          <li><code>username: string</code> - User's username or email</li>
+          <li><code>password: string</code> - User's password</li>
+          <li><code>rememberMe: boolean</code> - Remember me checkbox state</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

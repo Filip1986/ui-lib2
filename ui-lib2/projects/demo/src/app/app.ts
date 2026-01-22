@@ -1,125 +1,81 @@
-import { Component, signal } from '@angular/core';
-import { Button } from 'ui-components';
-import { Card } from 'ui-components';
-import { Login1Component, Login2Component, Login3Component, LoginFormData } from 'ui-components';
+import { Component } from '@angular/core';
+import { RouterOutlet, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Menu } from 'primeng/menu';
+import { Menubar } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Button, Card, Login1Component, Login2Component, Login3Component, Menu],
+  imports: [CommonModule, RouterOutlet, Menubar],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('UI Components Library Demo');
-
-  // Menu items with groups
   menuItems: MenuItem[] = [
     {
+      label: 'Home',
+      icon: 'pi pi-home',
+      command: () => this.navigate('/')
+    },
+    {
       label: 'Components',
+      icon: 'pi pi-th-large',
       items: [
         {
-          label: 'Button',
-          icon: 'pi pi-fw pi-circle',
-          command: () => this.scrollToSection('buttons')
+          label: 'Buttons',
+          icon: 'pi pi-circle',
+          command: () => this.navigate('/buttons')
         },
         {
-          label: 'Card',
-          icon: 'pi pi-fw pi-id-card',
-          command: () => this.scrollToSection('cards')
+          label: 'Cards',
+          icon: 'pi pi-id-card',
+          command: () => this.navigate('/cards')
         },
         {
           label: 'Login Forms',
-          icon: 'pi pi-fw pi-sign-in',
-          command: () => this.scrollToSection('login')
+          icon: 'pi pi-sign-in',
+          command: () => this.navigate('/login')
         }
       ]
     },
     {
       label: 'Documentation',
+      icon: 'pi pi-book',
       items: [
         {
           label: 'Getting Started',
-          icon: 'pi pi-fw pi-book',
+          icon: 'pi pi-play',
           command: () => alert('Navigate to Getting Started')
         },
         {
           label: 'API Reference',
-          icon: 'pi pi-fw pi-code',
+          icon: 'pi pi-code',
           command: () => alert('Navigate to API Reference')
-        },
-        {
-          label: 'Examples',
-          icon: 'pi pi-fw pi-file',
-          command: () => alert('Navigate to Examples')
         }
       ]
     },
     {
       label: 'Resources',
+      icon: 'pi pi-external-link',
       items: [
         {
           label: 'GitHub',
-          icon: 'pi pi-fw pi-github',
+          icon: 'pi pi-github',
           url: 'https://github.com',
           target: '_blank'
         },
         {
           label: 'Support',
-          icon: 'pi pi-fw pi-question-circle',
+          icon: 'pi pi-question-circle',
           command: () => alert('Contact Support')
-        },
-        {
-          separator: true
-        },
-        {
-          label: 'About',
-          icon: 'pi pi-fw pi-info-circle',
-          command: () => alert('UI Components Library v1.0.0')
         }
       ]
     }
   ];
 
-  // Login state
-  loginLoading = false;
+  constructor(private router: Router) {}
 
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-
-  onLogin(data: LoginFormData) {
-    console.log('Login attempt:', data);
-    this.loginLoading = true;
-
-    // Simulate API call
-    setTimeout(() => {
-      this.loginLoading = false;
-      alert(`Login successful!\nUsername: ${data.username}\nRemember Me: ${data.rememberMe}`);
-    }, 2000);
-  }
-
-  onRegister() {
-    console.log('Register clicked');
-    alert('Navigate to registration page');
-  }
-
-  onForgotPassword(email: string) {
-    console.log('Forgot password clicked', email);
-    alert(`Password reset link will be sent to: ${email || 'your email'}`);
-  }
-
-  onSocialLogin(provider: string) {
-    console.log('Social login clicked:', provider);
-    alert(`Login with ${provider}`);
-  }
-
-  onRememberMeChange(checked: boolean) {
-    console.log('Remember me changed:', checked);
+  navigate(path: string) {
+    this.router.navigate([path]);
   }
 }
