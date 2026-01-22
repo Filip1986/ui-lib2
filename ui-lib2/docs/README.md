@@ -40,6 +40,12 @@ docs/
   - Styling integration
   - Best practices
 
+- **[Modern Angular Features](guides/MODERN_ANGULAR_FEATURES.md)** - Modern Angular syntax guide
+  - New control flow syntax (`@if`, `@for`, `@switch`)
+  - Self-closing tags
+  - Performance benefits
+  - Migration examples
+
 - **[Publishing Guide](guides/PUBLISHING_GUIDE.md)** - Distribution and publishing
   - Publish to npm
   - Local development with npm link
@@ -93,6 +99,7 @@ docs/
 | **Get started quickly** | [Quick Start Guide](getting-started/QUICK_START.md) |
 | **Test in a new project** | [Testing Guide](getting-started/TEST_GUIDE.md) |
 | **See real-world examples** | [Integration Examples](guides/INTEGRATION_EXAMPLE.md) |
+| **Learn modern Angular features** | [Modern Angular Features](guides/MODERN_ANGULAR_FEATURES.md) |
 | **Publish the library** | [Publishing Guide](guides/PUBLISHING_GUIDE.md) |
 | **Learn the component APIs** | [API Reference](../README.md) |
 | **Understand the architecture** | [Architecture Docs](architecture/ARCHITECTURE.md) |
