@@ -119,6 +119,37 @@ $breakpoint-tablet: 968px;
   gap: $spacing-medium;
 }
 
+.login-variants {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-large;
+
+  .variant-group {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background: #fafafa;
+  }
+
+  .variant-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .login-demo-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.section-description {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 // Responsive Styles
 @include responsive($breakpoint-mobile) {
   .demo-container {

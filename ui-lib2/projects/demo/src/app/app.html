@@ -5,6 +5,59 @@
   </header>
 
   <main class="demo-content">
+    <!-- Login Components -->
+    <section class="component-section">
+      <h2>Login Components</h2>
+      <p class="section-description">Three different login component variants with full functionality</p>
+
+      <div class="login-variants">
+        <div class="variant-group">
+          <h3>Login Variant 1 - Card Style</h3>
+          <p class="variant-description">Elegant card-based login with gradient header</p>
+          <div class="login-demo-container" style="background: #f3f4f6; padding: 2rem; border-radius: 0.5rem;">
+            <lib-login-1
+              [loading]="loginLoading"
+              (submitLogin)="onLogin($event)"
+              (registerClick)="onRegister()"
+              (forgotPasswordClick)="onForgotPassword($event)"
+              (socialLoginClick)="onSocialLogin($event)"
+              (rememberMeChange)="onRememberMeChange($event)"
+            ></lib-login-1>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h3>Login Variant 2 - Minimal Style</h3>
+          <p class="variant-description">Clean, minimalist login design</p>
+          <div class="login-demo-container" style="padding: 2rem; border-radius: 0.5rem;">
+            <lib-login-2
+              [loading]="loginLoading"
+              (submitLogin)="onLogin($event)"
+              (registerClick)="onRegister()"
+              (forgotPasswordClick)="onForgotPassword($event)"
+              (socialLoginClick)="onSocialLogin($event)"
+              (rememberMeChange)="onRememberMeChange($event)"
+            ></lib-login-2>
+          </div>
+        </div>
+
+        <div class="variant-group">
+          <h3>Login Variant 3 - Split Panel Style</h3>
+          <p class="variant-description">Modern split-panel design with floating labels</p>
+          <div class="login-demo-container" style="padding: 2rem; border-radius: 0.5rem;">
+            <lib-login-3
+              [loading]="loginLoading"
+              (submitLogin)="onLogin($event)"
+              (registerClick)="onRegister()"
+              (forgotPasswordClick)="onForgotPassword($event)"
+              (socialLoginClick)="onSocialLogin($event)"
+              (rememberMeChange)="onRememberMeChange($event)"
+            ></lib-login-3>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Button Components -->
     <section class="component-section">
       <h2>Button Components</h2>
