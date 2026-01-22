@@ -1,8 +1,6 @@
 /* Global SCSS Styles */
 
-// PrimeNG Theme and Icons
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
+// PrimeIcons (PrimeNG v21+ uses runtime theming configured in app.config.ts)
 @import "primeicons/primeicons.css";
 
 // SCSS Variables
