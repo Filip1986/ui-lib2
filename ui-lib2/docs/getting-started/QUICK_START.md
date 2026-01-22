@@ -1,20 +1,46 @@
 # Quick Start Guide - UI Components Library
 
+## Prerequisites
+
+Before running the demo application, you need to:
+
+1. **Install dependencies** (if not already done):
+   ```bash
+   cd D:\Work\Personal\Github\ui-lib2\ui-lib2
+   npm install
+   ```
+
+2. **Build the UI components library first** (REQUIRED):
+   ```bash
+   ng build ui-components
+   ```
+   
+   ⚠️ **Important**: You must build the library before running the demo app. The demo imports components from the built library in `dist/ui-components/`. Without building first, you'll get module import errors.
+
+3. **Start the demo application**:
+   ```bash
+   npm start
+   ```
+   Or:
+   ```bash
+   ng serve demo
+   ```
+
 ## What You Have Now
 
 ✅ **Angular UI Components Library** with:
 - Button component (3 design variants: Material, Bootstrap, Minimal)
 - Card component (3 design variants: Material, Bootstrap, Minimal)
-- Fully built and ready to use
-- Demo application running
+- Built library in `dist/ui-components/`
+- Demo application ready to run
 
 ✅ **Demo Application** showcasing all components:
-- Running at: http://localhost:4200
+- Access at: http://localhost:4200 (when running)
 - Shows all variants, sizes, colors, and configurations
 
 ## View the Demo
 
-The demo application is currently running. Open your browser and navigate to:
+After building the library and starting the server, open your browser and navigate to:
 
 **http://localhost:4200**
 
