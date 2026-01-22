@@ -40,6 +40,13 @@ docs/
   - Styling integration
   - Best practices
 
+- **[PrimeNG Integration](guides/PRIMENG_INTEGRATION.md)** - PrimeNG setup and configuration
+  - Installation and setup
+  - Version compatibility
+  - Theme configuration
+  - Consuming applications setup
+  - Troubleshooting
+
 - **[Modern Angular Features](guides/MODERN_ANGULAR_FEATURES.md)** - Modern Angular syntax guide
   - New control flow syntax (`@if`, `@for`, `@switch`)
   - Self-closing tags
@@ -72,6 +79,12 @@ docs/
   - Component features
   - Project structure
   - Current status
+
+- **[Update Log](reference/UPDATE_LOG.md)** - Version upgrade history
+  - Angular 21 upgrade details
+  - PrimeNG version updates
+  - Breaking changes
+  - Migration guide for consumers
 
 - **[API Reference](../README.md)** - Component API documentation
   - Button component API
@@ -108,24 +121,28 @@ docs/
 | **Get started quickly** | [Quick Start Guide](getting-started/QUICK_START.md) |
 | **Test in a new project** | [Testing Guide](getting-started/TEST_GUIDE.md) |
 | **See real-world examples** | [Integration Examples](guides/INTEGRATION_EXAMPLE.md) |
+| **Setup PrimeNG** | [PrimeNG Integration](guides/PRIMENG_INTEGRATION.md) |
 | **Learn modern Angular features** | [Modern Angular Features](guides/MODERN_ANGULAR_FEATURES.md) |
 | **Publish the library** | [Publishing Guide](guides/PUBLISHING_GUIDE.md) |
 | **Learn the component APIs** | [API Reference](../README.md) |
 | **Understand the architecture** | [Architecture Docs](architecture/ARCHITECTURE.md) |
 | **Get a project overview** | [Project Summary](reference/PROJECT_SUMMARY.md) |
+| **See version upgrade history** | [Update Log](reference/UPDATE_LOG.md) |
 | **Verify everything works** | [Verification Checklist](reference/VERIFICATION_CHECKLIST.md) |
 
 ### By Role
 
 **👨‍💻 Developer (Using the Library)**
 1. [Quick Start Guide](getting-started/QUICK_START.md) - How to use in your projects
-2. [API Reference](../README.md) - Component APIs and props
-3. [Integration Examples](guides/INTEGRATION_EXAMPLE.md) - Real-world examples
+2. [PrimeNG Integration](guides/PRIMENG_INTEGRATION.md) - Setup PrimeNG dependencies
+3. [API Reference](../README.md) - Component APIs and props
+4. [Integration Examples](guides/INTEGRATION_EXAMPLE.md) - Real-world examples
 
 **🚀 Contributor (Developing the Library)**
 1. [Architecture Documentation](architecture/ARCHITECTURE.md) - System design
 2. [Project Summary](reference/PROJECT_SUMMARY.md) - What's been built
-3. [Verification Checklist](reference/VERIFICATION_CHECKLIST.md) - Testing checklist
+3. [Update Log](reference/UPDATE_LOG.md) - Version history and upgrades
+4. [Verification Checklist](reference/VERIFICATION_CHECKLIST.md) - Testing checklist
 
 **📦 Publisher (Distributing the Library)**
 1. [Publishing Guide](guides/PUBLISHING_GUIDE.md) - How to publish
