@@ -1,12 +1,19 @@
 <div class="demo-container">
   <header class="demo-header">
-    <h1>{{ title() }}</h1>
-    <p>Explore different design variants of our UI components</p>
+    <div class="header-content">
+      <div class="header-title">
+        <h1>{{ title() }}</h1>
+        <p>Explore different design variants of our UI components</p>
+      </div>
+      <div class="header-menu">
+        <p-menu [model]="menuItems" styleClass="demo-menu"></p-menu>
+      </div>
+    </div>
   </header>
 
   <main class="demo-content">
     <!-- Login Components -->
-    <section class="component-section">
+    <section class="component-section" id="login">
       <h2>Login Components</h2>
       <p class="section-description">Three different login component variants with full functionality</p>
 
@@ -59,7 +66,7 @@
     </section>
 
     <!-- Button Components -->
-    <section class="component-section">
+    <section class="component-section" id="buttons">
       <h2>Button Components</h2>
 
       <div class="variant-group">
@@ -121,7 +128,7 @@
     </section>
 
     <!-- Card Components -->
-    <section class="component-section">
+    <section class="component-section" id="cards">
       <h2>Card Components</h2>
 
       <div class="card-grid">
