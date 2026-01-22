@@ -2,6 +2,16 @@
 
 A flexible Angular UI component library with multiple design variants (Material, Bootstrap, and Minimal) that can be easily integrated into your Angular projects.
 
+## 📚 Documentation
+
+**New here?** Check out the complete documentation: **[📖 Documentation Index](docs/README.md)**
+
+Quick links:
+- 🚀 [Quick Start Guide](docs/getting-started/QUICK_START.md) - Get started in 5 minutes
+- 📘 [Integration Examples](docs/guides/INTEGRATION_EXAMPLE.md) - Real-world usage examples
+- 🏗️ [Architecture](docs/architecture/ARCHITECTURE.md) - System design and structure
+- 📦 [Publishing Guide](docs/guides/PUBLISHING_GUIDE.md) - How to publish and distribute
+
 ## Features
 
 - 🎨 **Multiple Design Variants**: Choose between Material Design, Bootstrap, and Minimal styles
@@ -187,4 +197,10 @@ MIT
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) to learn about:
+- Setting up your development environment
+- Where to add new documentation
+- Component development guidelines
+- Pull request process
+
+Feel free to submit a Pull Request or open an issue!
