@@ -1,0 +1,155 @@
+<div class="demo-container">
+  <header class="demo-header">
+    <h1>{{ title() }}</h1>
+    <p>Explore different design variants of our UI components</p>
+  </header>
+
+  <main class="demo-content">
+    <!-- Button Components -->
+    <section class="component-section">
+      <h2>Button Components</h2>
+
+      <div class="variant-group">
+        <h3>Material Design Variant</h3>
+        <div class="button-group">
+          <uilib-button variant="material" color="primary">Primary</uilib-button>
+          <uilib-button variant="material" color="secondary">Secondary</uilib-button>
+          <uilib-button variant="material" color="success">Success</uilib-button>
+          <uilib-button variant="material" color="danger">Danger</uilib-button>
+          <uilib-button variant="material" color="warning">Warning</uilib-button>
+        </div>
+        <div class="button-group">
+          <uilib-button variant="material" size="small" color="primary">Small</uilib-button>
+          <uilib-button variant="material" size="medium" color="primary">Medium</uilib-button>
+          <uilib-button variant="material" size="large" color="primary">Large</uilib-button>
+        </div>
+      </div>
+
+      <div class="variant-group">
+        <h3>Bootstrap Variant</h3>
+        <div class="button-group">
+          <uilib-button variant="bootstrap" color="primary">Primary</uilib-button>
+          <uilib-button variant="bootstrap" color="secondary">Secondary</uilib-button>
+          <uilib-button variant="bootstrap" color="success">Success</uilib-button>
+          <uilib-button variant="bootstrap" color="danger">Danger</uilib-button>
+          <uilib-button variant="bootstrap" color="warning">Warning</uilib-button>
+        </div>
+        <div class="button-group">
+          <uilib-button variant="bootstrap" size="small" color="primary">Small</uilib-button>
+          <uilib-button variant="bootstrap" size="medium" color="primary">Medium</uilib-button>
+          <uilib-button variant="bootstrap" size="large" color="primary">Large</uilib-button>
+        </div>
+      </div>
+
+      <div class="variant-group">
+        <h3>Minimal Variant</h3>
+        <div class="button-group">
+          <uilib-button variant="minimal" color="primary">Primary</uilib-button>
+          <uilib-button variant="minimal" color="secondary">Secondary</uilib-button>
+          <uilib-button variant="minimal" color="success">Success</uilib-button>
+          <uilib-button variant="minimal" color="danger">Danger</uilib-button>
+          <uilib-button variant="minimal" color="warning">Warning</uilib-button>
+        </div>
+        <div class="button-group">
+          <uilib-button variant="minimal" size="small" color="primary">Small</uilib-button>
+          <uilib-button variant="minimal" size="medium" color="primary">Medium</uilib-button>
+          <uilib-button variant="minimal" size="large" color="primary">Large</uilib-button>
+        </div>
+      </div>
+
+      <div class="variant-group">
+        <h3>Disabled State</h3>
+        <div class="button-group">
+          <uilib-button variant="material" color="primary" [disabled]="true">Disabled</uilib-button>
+          <uilib-button variant="bootstrap" color="success" [disabled]="true">Disabled</uilib-button>
+          <uilib-button variant="minimal" color="danger" [disabled]="true">Disabled</uilib-button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Components -->
+    <section class="component-section">
+      <h2>Card Components</h2>
+
+      <div class="card-grid">
+        <div class="variant-group">
+          <h3>Material Design Variant</h3>
+          <uilib-card variant="material" elevation="medium">
+            <div card-header>Card Header</div>
+            <p>This is a Material Design card with medium elevation. It features clean shadows and rounded corners.</p>
+            <p>Perfect for modern applications!</p>
+            <div card-footer>
+              <uilib-button variant="material" color="primary" size="small">Action</uilib-button>
+            </div>
+          </uilib-card>
+
+          <uilib-card variant="material" elevation="high" [hoverable]="true">
+            <div card-header>Hoverable Card</div>
+            <p>This card has high elevation and hover effects. Try hovering over it!</p>
+          </uilib-card>
+        </div>
+
+        <div class="variant-group">
+          <h3>Bootstrap Variant</h3>
+          <uilib-card variant="bootstrap" elevation="low">
+            <div card-header>Bootstrap Card</div>
+            <p>This is a Bootstrap-styled card with subtle borders and shadows.</p>
+            <p>Great for traditional web applications.</p>
+            <div card-footer>
+              <uilib-button variant="bootstrap" color="success" size="small">Submit</uilib-button>
+              <uilib-button variant="bootstrap" color="secondary" size="small">Cancel</uilib-button>
+            </div>
+          </uilib-card>
+
+          <uilib-card variant="bootstrap" elevation="medium" [bordered]="true">
+            <div card-header>Bordered Card</div>
+            <p>This card has explicit borders for better definition.</p>
+          </uilib-card>
+        </div>
+
+        <div class="variant-group">
+          <h3>Minimal Variant</h3>
+          <uilib-card variant="minimal" elevation="none" [bordered]="true">
+            <div card-header>Minimal Card</div>
+            <p>This is a minimal card design with clean lines and no shadows.</p>
+            <p>Perfect for content-focused layouts.</p>
+            <div card-footer>
+              <uilib-button variant="minimal" color="primary" size="small">Learn More</uilib-button>
+            </div>
+          </uilib-card>
+
+          <uilib-card variant="minimal" elevation="none" [hoverable]="true">
+            <p>Simple card without header or footer. Hover to see the effect!</p>
+          </uilib-card>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mixed Examples -->
+    <section class="component-section">
+      <h2>Mixed Example</h2>
+      <div class="card-grid">
+        <uilib-card variant="material" elevation="medium">
+          <div card-header>User Profile</div>
+          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Email:</strong> john.doe@example.com</p>
+          <p><strong>Role:</strong> Developer</p>
+          <div card-footer>
+            <uilib-button variant="material" color="primary" size="small">Edit Profile</uilib-button>
+            <uilib-button variant="minimal" color="secondary" size="small">View Details</uilib-button>
+          </div>
+        </uilib-card>
+
+        <uilib-card variant="bootstrap" elevation="low" [bordered]="true">
+          <div card-header>Actions</div>
+          <p>Choose an action to perform:</p>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <uilib-button variant="bootstrap" color="primary" [fullWidth]="true">Create New</uilib-button>
+            <uilib-button variant="bootstrap" color="success" [fullWidth]="true">Import</uilib-button>
+            <uilib-button variant="bootstrap" color="warning" [fullWidth]="true">Export</uilib-button>
+          </div>
+        </uilib-card>
+      </div>
+    </section>
+  </main>
+</div>
