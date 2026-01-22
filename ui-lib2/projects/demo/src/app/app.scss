@@ -1,205 +1,49 @@
-// SCSS Variables
-$primary-gradient-start: #667eea;
-$primary-gradient-end: #764ba2;
-$white: #fff;
-$shadow-color: rgba(0, 0, 0, 0.15);
-$text-shadow: rgba(0, 0, 0, 0.3);
-
-// Spacing
-$spacing-small: 1rem;
-$spacing-medium: 2rem;
-$spacing-large: 3rem;
-
-// Font Sizes
-$font-size-base: 1rem;
-$font-size-large: 1.25rem;
-$font-size-xlarge: 1.5rem;
-$font-size-xxlarge: 2rem;
-$font-size-hero: 3rem;
-
-// Breakpoints
-$breakpoint-mobile: 768px;
-$breakpoint-tablet: 968px;
-
-// Mixins
-@mixin gradient-bg {
-  background: linear-gradient(135deg, $primary-gradient-start 0%, $primary-gradient-end 100%);
-}
-
-@mixin responsive($breakpoint) {
-  @media (max-width: $breakpoint) {
-    @content;
-  }
-}
-
-// Base Styles
-* {
-  box-sizing: border-box;
-}
-
-.demo-container {
+.layout-wrapper {
   min-height: 100vh;
-  @include gradient-bg;
   display: flex;
   flex-direction: column;
 }
 
-.demo-header {
-  color: $white;
-  padding: $spacing-medium $spacing-medium $spacing-small;
-
-  .header-content {
-    max-width: 1400px;
-    margin: 0 auto 1.5rem;
-    text-align: center;
-  }
-
-  .header-title {
-    h1 {
-      font-size: $font-size-hero;
-      margin: 0 0 0.5rem;
-      font-weight: 700;
-      text-shadow: 2px 2px 4px $text-shadow;
-    }
-
-    p {
-      font-size: $font-size-large;
-      margin: 0;
-      opacity: 0.9;
-    }
-  }
+.layout-container {
+  display: flex;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
 }
 
-.demo-nav {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.demo-content {
+.layout-content {
   flex: 1;
-  padding: $spacing-medium;
-}
+  margin-left: 250px;
+  padding: 2rem;
+  background: #f8f9fa;
+  overflow-x: hidden;
 
-.demo-footer {
-  background: rgba(0, 0, 0, 0.2);
-  color: $white;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
-
-  p {
-    margin: 0;
-    opacity: 0.9;
+  @media (max-width: 968px) {
+    margin-left: 0;
   }
 }
 
-// Responsive Styles
-@include responsive($breakpoint-mobile) {
-  .demo-container {
-    padding: 0;
-  }
+.layout-mask {
+  display: none;
 
-  .demo-header {
-    padding: $spacing-small;
-
-    .header-content {
-      margin-bottom: 1rem;
-    }
-
-    .header-title {
-      h1 {
-        font-size: $font-size-xxlarge;
-      }
-
-      p {
-        font-size: $font-size-base;
-      }
-    }
-  }
-
-  .demo-content {
-    padding: $spacing-small;
+  @media (max-width: 968px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    animation: fadeIn 0.3s;
   }
 }
 
-@include responsive($breakpoint-tablet) {
-  .demo-header {
-    .header-title {
-      h1 {
-        font-size: 2.25rem;
-      }
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
-
-// PrimeNG Menubar Styles
-::ng-deep .demo-menubar {
-  background: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(10px);
-  border-radius: 12px !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  padding: 0.5rem 1rem !important;
-
-  .p-menubar-root-list {
-    gap: 0.5rem;
-  }
-
-  .p-menubar-item-link {
-    border-radius: 8px !important;
-    padding: 0.75rem 1rem !important;
-    transition: all 0.3s ease !important;
-    color: #333 !important;
-    font-weight: 500;
-
-    &:hover {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%) !important;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.3) !important;
-    }
-
-    .p-menubar-item-icon {
-      color: $primary-gradient-start !important;
-    }
-
-    .p-menubar-item-label {
-      color: #333 !important;
-      font-weight: 600;
-    }
-  }
-
-  .p-menubar-submenu {
-    background: rgba(255, 255, 255, 0.98) !important;
-    backdrop-filter: blur(10px);
-    border-radius: 12px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    padding: 0.5rem !important;
-    margin-top: 0.5rem !important;
-  }
-
-  .p-menubar-submenu .p-menubar-item-link {
-    border-radius: 8px !important;
-    margin-bottom: 0.25rem;
-
-    &:hover {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%) !important;
-      transform: translateX(5px);
-    }
-  }
-
-  .p-menubar-button {
-    color: #333 !important;
-    border-radius: 8px !important;
-
-    &:hover {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%) !important;
-    }
-  }
-}
-
-
 

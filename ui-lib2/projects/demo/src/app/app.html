@@ -1,21 +1,16 @@
-<div class="demo-container">
-  <header class="demo-header">
-    <div class="header-content">
-      <div class="header-title">
-        <h1>UI Components Library</h1>
-        <p>Beautiful, reusable components for your Angular applications</p>
-      </div>
+<div class="layout-wrapper">
+  <app-topbar (menuButtonClick)="toggleSidebar()"></app-topbar>
+
+  <div class="layout-container">
+    <app-sidebar [class.mobile-visible]="sidebarVisible"></app-sidebar>
+
+    <div class="layout-content">
+      <router-outlet></router-outlet>
     </div>
-    <nav class="demo-nav">
-      <p-menubar [model]="menuItems" styleClass="demo-menubar"></p-menubar>
-    </nav>
-  </header>
-
-  <main class="demo-content">
-    <router-outlet></router-outlet>
-  </main>
-
-  <footer class="demo-footer">
-    <p>&copy; 2026 UI Components Library. All rights reserved.</p>
-  </footer>
+  </div>
 </div>
+
+@if (sidebarVisible) {
+  <div class="layout-mask" (click)="toggleSidebar()"></div>
+}
+
