@@ -4,6 +4,44 @@
 
 ### Option 1: Publish to npm (Public or Private Registry)
 
+#### Prerequisites: npm Authentication Setup
+
+npm requires two-factor authentication (2FA) for publishing packages. You have two options:
+
+**Option A: Use Granular Access Token (Recommended)**
+
+1. **Generate an access token:**
+   - Go to https://www.npmjs.com/settings/YOUR_USERNAME/tokens
+   - Click "Generate New Token" → Select "Granular Access Token"
+   - Give it a name (e.g., "ui-components-publish")
+   - Set expiration (optional)
+   - Under "Packages and scopes", select:
+     - **Permissions**: "Read and write"
+     - **Packages**: Select the specific package or "All packages"
+   - Under "Organizations and repositories": Configure as needed
+   - Check **"Bypass 2FA requirement"** (this is the key!)
+   - Click "Generate Token"
+   - **IMPORTANT:** Copy and save the token immediately (you won't see it again!)
+
+2. **Configure npm to use the token:**
+   ```bash
+   npm config set //registry.npmjs.org/:_authToken YOUR_TOKEN_HERE
+   ```
+
+   Or create/edit `~/.npmrc` file and add:
+   ```
+   //registry.npmjs.org/:_authToken=YOUR_TOKEN_HERE
+   ```
+
+**Option B: Enable 2FA on Your Account**
+
+1. Go to https://www.npmjs.com/settings/YOUR_USERNAME/twofa
+2. Enable two-factor authentication
+3. Use `npm login` and follow the 2FA prompts
+4. When publishing, you'll need to enter your 2FA code
+
+#### Publishing Steps
+
 1. **Build the library:**
    ```bash
    cd ui-lib2
@@ -16,20 +54,27 @@
    ```
 
 3. **Update package.json with your details:**
-   - Update the `name` field to a unique package name
+   - Update the `name` field to a unique package name (e.g., `@yourusername/ui-components`)
    - Update `version` field
    - Add `author`, `description`, `keywords`, `repository`, etc.
 
-4. **Login to npm:**
+4. **Verify you're logged in:**
    ```bash
-   npm login
+   npm whoami
    ```
 
 5. **Publish:**
    ```bash
-   npm publish
    # For scoped packages (e.g., @yourusername/ui-components):
    npm publish --access public
+   
+   # For unscoped packages:
+   npm publish
+   ```
+
+   If using 2FA (Option B), you'll be prompted for your 2FA code:
+   ```bash
+   npm publish --otp=YOUR_2FA_CODE
    ```
 
 ### Option 2: Use as Local Package with npm link
@@ -306,6 +351,61 @@ When actively developing the library and using it in another project:
 Changes to the library will be automatically reflected in your application!
 
 ## Troubleshooting
+
+### Issue: 403 Forbidden - Two-factor authentication required
+
+**Error:**
+```
+npm error code E403
+npm error 403 403 Forbidden - PUT https://registry.npmjs.org/@yourname%2fpackage
+npm error 403 Two-factor authentication or granular access token with bypass 2fa enabled is required
+```
+
+**Solution:**
+
+1. **Recommended: Use Granular Access Token**
+   - Go to https://www.npmjs.com/settings/YOUR_USERNAME/tokens
+   - Generate a new "Granular Access Token"
+   - Make sure to check **"Bypass 2FA requirement"**
+   - Configure npm to use it:
+     ```bash
+     npm config set //registry.npmjs.org/:_authToken YOUR_TOKEN_HERE
+     ```
+
+2. **Alternative: Enable 2FA and use OTP**
+   - Enable 2FA at https://www.npmjs.com/settings/YOUR_USERNAME/twofa
+   - Publish with OTP flag:
+     ```bash
+     npm publish --otp=123456
+     ```
+
+3. **Verify authentication:**
+   ```bash
+   npm whoami
+   # Should display your username
+   ```
+
+### Issue: Package name already exists
+
+**Error:**
+```
+npm error code E403
+npm error 403 You do not have permission to publish "ui-components"
+```
+
+**Solution:** 
+- Use a scoped package name: `@yourusername/ui-components`
+- Update `package.json` in `projects/ui-components/package.json`:
+  ```json
+  {
+    "name": "@yourusername/ui-components",
+    "version": "1.0.0"
+  }
+  ```
+- Publish with `--access public`:
+  ```bash
+  npm publish --access public
+  ```
 
 ### Issue: Module not found
 
